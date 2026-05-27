@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>嘉義微刺青 tattoo16888｜Chiayi Micro Tattoo</title>
+<style>
+:root{
+  --bg:#f8f1e9;
+  --paper:#fffaf5;
+  --paper2:#f2e7dc;
+  --ink:#2f2924;
+  --muted:#7b6d62;
+  --line:#e1d0bf;
+  --gold:#b89472;
+  --deep:#3d332c;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:-apple-system,BlinkMacSystemFont,"Noto Sans TC","Segoe UI",sans-serif;
+  letter-spacing:.03em;
+}
+a{text-decoration:none;color:inherit}
+img{display:block;max-width:100%}
+
+.nav{
+  position:fixed;top:0;left:0;right:0;z-index:30;
+  background:rgba(255,250,245,.86);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid rgba(225,208,191,.75);
+}
+.nav-inner{
+  max-width:1240px;margin:auto;
+  padding:18px 28px;
+  display:grid;
+  grid-template-columns:260px 1fr 170px;
+  align-items:center;
+  gap:24px;
+}
+.logo-wrap{display:flex;align-items:center;gap:14px}
+.mark{
+  width:54px;height:42px;position:relative;
+  font-family:Georgia,serif;font-size:36px;line-height:1;color:var(--ink);
+}
+.mark:after{
+  content:"";position:absolute;left:19px;top:9px;width:30px;height:26px;
+  border:1px solid var(--ink);transform:skew(-14deg);
+}
+.brand strong{font-weight:500;letter-spacing:.12em;font-size:15px}
+.brand span{display:block;font-family:Georgia,serif;color:var(--muted);font-size:11px;letter-spacing:.16em;margin-top:4px}
+.menu{display:flex;justify-content:center;gap:26px;font-size:12px;color:#73665c;text-align:center}
+.menu a span{display:block;font-size:9px;color:#ad9a89;letter-spacing:.14em;margin-top:4px}
+.nav-cta{justify-self:end;background:#b89472;color:#fff;border-radius:999px;padding:12px 20px;font-size:13px}
+
+.hero{
+  min-height:100vh;
+  padding-top:78px;
+  display:grid;
+  grid-template-columns:44% 56%;
+  position:relative;
+  overflow:hidden;
+}
+.hero-text{
+  padding:92px 7vw 70px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  position:relative;
+  z-index:2;
+}
+.kicker{font-size:13px;color:#9a8778;letter-spacing:.32em;margin-bottom:30px}
+h1{
+  font-family:Georgia,"Times New Roman",serif;
+  font-weight:400;
+  font-size:clamp(44px,5.7vw,86px);
+  line-height:1.16;
+  margin:0 0 28px;
+  letter-spacing:.14em;
+}
+.script{
+  font-family:Georgia,"Times New Roman",serif;
+  font-style:italic;
+  color:#a58d7a;
+  letter-spacing:.18em;
+  margin-bottom:30px;
+}
+.hero-desc{color:#5f554d;line-height:2.05;max-width:440px;margin-bottom:34px}
+.btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn{
+  display:inline-flex;align-items:center;gap:10px;justify-content:center;
+  padding:13px 26px;border-radius:999px;border:1px solid var(--gold);
+  background:var(--gold);color:#fff;font-size:14px;
+}
+.btn.ghost{background:transparent;color:var(--deep)}
+.hero-image{
+  position:relative;min-height:calc(100vh - 78px);
+}
+.hero-image img{
+  width:100%;height:100%;object-fit:cover;position:absolute;inset:0;
+}
+.hero-image:before{
+  content:"";position:absolute;inset:0;z-index:1;
+  background:linear-gradient(90deg,var(--bg) 0%,rgba(248,241,233,.72) 9%,rgba(248,241,233,0) 40%);
+}
+.vertical{
+  position:absolute;right:34px;top:120px;z-index:2;
+  writing-mode:vertical-rl;letter-spacing:.28em;color:#8e7e70;font-size:11px;
+}
+.dots{margin-top:42px;color:#dac7b6;letter-spacing:.7em}
+
+.marquee{
+  border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  background:#fffaf5;overflow:hidden;white-space:nowrap;
+}
+.marquee div{
+  display:inline-block;padding:20px 0;
+  animation:scroll 28s linear infinite;
+  font-family:Georgia,serif;color:#8e7e70;letter-spacing:.18em;
+}
+@keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+section{padding:100px 28px}
+.container{max-width:1180px;margin:auto}
+.split{
+  display:grid;grid-template-columns:.9fr 1.1fr;gap:68px;align-items:center;
+}
+.about-img{
+  border-radius:260px 260px 18px 18px;
+  overflow:hidden;height:620px;box-shadow:0 28px 80px rgba(65,45,30,.12);
+}
+.about-img img{width:100%;height:100%;object-fit:cover}
+.small-label{font-family:Georgia,serif;color:var(--gold);font-size:14px;letter-spacing:.2em;margin-bottom:14px}
+h2{
+  font-family:Georgia,"Times New Roman",serif;
+  font-weight:400;
+  font-size:clamp(34px,4.4vw,58px);
+  line-height:1.28;margin:0 0 24px;
+}
+.text{color:#6d6056;line-height:2.1}
+.stats{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:36px;
+}
+.stat{border-left:1px solid var(--line);padding-left:18px}
+.stat b{display:block;font-family:Georgia,serif;font-size:34px;font-weight:400;color:var(--deep)}
+.stat span{color:#8d7d70;font-size:12px;letter-spacing:.12em}
+
+.services{background:#fffaf5;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.service-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:38px}
+.service{
+  background:linear-gradient(180deg,#fff,#f7eee5);
+  border:1px solid var(--line);
+  border-radius:26px;overflow:hidden;
+  min-height:420px;
+}
+.service img{width:100%;height:210px;object-fit:cover}
+.service div{padding:24px}
+.service small{font-family:Georgia,serif;color:var(--gold);letter-spacing:.16em}
+.service h3{font-family:Georgia,serif;font-weight:400;font-size:27px;margin:10px 0 12px}
+.service p{color:#6d6056;line-height:1.85;font-size:14px}
+
+.portfolio-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:36px}
+.portfolio-head p{max-width:420px;color:#75685e;line-height:1.9}
+.portfolio{
+  display:grid;grid-template-columns:repeat(12,1fr);gap:18px;
+}
+.work{
+  position:relative;overflow:hidden;border-radius:8px;background:#ddd;
+  min-height:360px;box-shadow:0 18px 55px rgba(65,45,30,.1);
+}
+.work:nth-child(1){grid-column:span 5;min-height:500px}
+.work:nth-child(2){grid-column:span 4;min-height:420px}
+.work:nth-child(3){grid-column:span 3;min-height:420px}
+.work:nth-child(4){grid-column:span 4}
+.work:nth-child(5){grid-column:span 4}
+.work:nth-child(6){grid-column:span 4}
+.work img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0;transition:.6s}
+.work:hover img{transform:scale(1.05)}
+.work:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,.42))}
+.work-info{position:absolute;left:24px;right:24px;bottom:24px;color:#fff;z-index:2}
+.work-info small{font-family:Georgia,serif;letter-spacing:.16em;opacity:.8}
+.work-info h3{font-family:Georgia,serif;font-size:27px;font-weight:400;margin:6px 0}
+
+.process-grid{
+  display:grid;grid-template-columns:1fr 1fr 1fr;gap:40px;margin-top:38px;
+}
+.process-card{
+  border-top:1px solid var(--line);padding-top:24px;position:relative;
+}
+.process-card .num{
+  font-family:Georgia,serif;font-size:42px;color:#c7ad96;margin-bottom:18px;
+}
+.process-card h3{font-family:Georgia,serif;font-size:28px;font-weight:400;margin:0 0 14px}
+.process-card p{color:#6d6056;line-height:1.9}
+
+.review{background:#f1e5da}
+.review-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px;align-items:start}
+.review-list{display:grid;gap:18px}
+.quote{
+  background:rgba(255,250,245,.82);
+  border:1px solid var(--line);
+  border-radius:28px;padding:28px;
+}
+.quote p{font-family:Georgia,serif;font-size:22px;line-height:1.75;margin:0 0 18px}
+.quote span{color:#8c7a6c;font-size:13px}
+
+.cta{
+  padding:0 28px 100px;
+}
+.cta-box{
+  max-width:1180px;margin:auto;
+  background:var(--deep);color:#fff;
+  border-radius:38px;overflow:hidden;
+  display:grid;grid-template-columns:1fr 1fr;
+}
+.cta-text{padding:70px}
+.cta-text h2{color:#fff}
+.cta-text p{color:#e6d8ca;line-height:2}
+.cta-img{min-height:420px}
+.cta-img img{width:100%;height:100%;object-fit:cover}
+
+footer{
+  background:#fffaf5;border-top:1px solid var(--line);
+  padding:62px 28px;color:#6d6056;
+}
+.footer-grid{max-width:1180px;margin:auto;display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:36px}
+.footer-grid h3{font-family:Georgia,serif;font-weight:400;font-size:28px;color:var(--ink);margin:0 0 16px}
+.footer-grid p,.footer-grid a{display:block;line-height:2;color:#6d6056;font-size:14px}
+.copy{max-width:1180px;margin:42px auto 0;border-top:1px solid var(--line);padding-top:22px;font-size:12px;color:#9a897b}
+
+@media(max-width:900px){
+  .nav-inner{grid-template-columns:1fr auto}.menu{display:none}.nav-cta{padding:10px 16px}
+  .hero{grid-template-columns:1fr;padding-top:76px}.hero-text{padding:54px 24px}.hero-image{min-height:520px;order:-1}.hero-image:before{background:linear-gradient(180deg,rgba(248,241,233,0) 45%,var(--bg) 100%)}
+  .vertical{display:none}.split,.review-layout,.cta-box,.footer-grid{grid-template-columns:1fr}.about-img{height:460px;border-radius:28px}
+  .stats,.service-grid,.process-grid{grid-template-columns:1fr}.portfolio{grid-template-columns:1fr}.work:nth-child(n){grid-column:span 1;min-height:380px}
+  .portfolio-head{display:block}.cta-text{padding:42px 28px}section{padding:74px 22px}
+}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a class="logo-wrap" href="#">
+      <div class="mark">J</div>
+      <div class="brand"><strong>嘉義微刺青 tattoo16888</strong><span>CHIAYI MICRO TATTOO</span></div>
+    </a>
+    <div class="menu">
+      <a href="#">首頁<span>HOME</span></a>
+      <a href="#about">關於我們<span>ABOUT</span></a>
+      <a href="#services">作品類型<span>SERVICE</span></a>
+      <a href="#portfolio">作品集<span>GALLERY</span></a>
+      <a href="#process">預約流程<span>PROCESS</span></a>
+      <a href="#notice">刺青須知<span>NOTICE</span></a>
+      <a href="#review">客人評價<span>REVIEW</span></a>
+    </div>
+    <a class="nav-cta" href="https://line.me/ti/p/~windy701206" target="_blank">LINE 預約</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-text">
+    <div class="kicker">屬於你的・微小而永恆的印記</div>
+    <h1>在皮膚上，<br>記錄你的故事。</h1>
+    <div class="script">Your story, on your skin.</div>
+    <p class="hero-desc">韓系溫柔風格・細緻線條・客製設計。每一個作品，都是獨一無二的存在。</p>
+    <div class="btns">
+      <a class="btn" href="https://line.me/ti/p/~windy701206" target="_blank">LINE 預約</a>
+      <a class="btn ghost" href="#portfolio">欣賞作品 →</a>
+    </div>
+    <div class="dots">● ○ ○</div>
+  </div>
+  <div class="hero-image">
+    <img src="assets/hero.jpg" alt="嘉義微刺青耳後作品">
+    <div class="vertical">CHIAYI MICRO TATTOO</div>
+  </div>
+</header>
+
+<div class="marquee">
+  <div>
+    Fine Line Tattoo　嘉義微刺青　Since 2026　Custom Design　Pet Memorial　Botanical Tattoo　Lettering Tattoo　
+    Fine Line Tattoo　嘉義微刺青　Since 2026　Custom Design　Pet Memorial　Botanical Tattoo　Lettering Tattoo　
+  </div>
+</div>
+
+<section id="about">
+  <div class="container split">
+    <div class="about-img"><img src="assets/floral.jpg" alt="花草細線刺青"></div>
+    <div>
+      <div class="small-label">About the Studio</div>
+      <h2>刺青不是衝動，<br>是把某個時刻好好留下。</h2>
+      <p class="text">我們相信，好的微刺青不需要很大聲。它可以是一個名字、一隻寵物、一段關係、一個日期，或只是生活裡你想記得的某個瞬間。透過細線、留白與自然的手繪感，讓刺青像是安靜陪著你的記號。</p>
+      <div class="stats">
+        <div class="stat"><b>Fine</b><span>細線風格</span></div>
+        <div class="stat"><b>Custom</b><span>客製設計</span></div>
+        <div class="stat"><b>Chiayi</b><span>嘉義預約制</span></div>
+        <div class="stat"><b>Soft</b><span>溫柔質感</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="container">
+    <div class="small-label">Tattoo Services</div>
+    <h2>每一種紀念，<br>都有適合它的線條。</h2>
+    <div class="service-grid">
+      <article class="service"><img src="assets/pets.jpg" alt="寵物刺青"><div><small>Pet Memorial</small><h3>寵物紀念</h3><p>把毛孩可愛的樣子，轉成溫柔細緻、能長久陪伴的刺青。</p></div></article>
+      <article class="service"><img src="assets/floral.jpg" alt="花草刺青"><div><small>Botanical</small><h3>花草細線</h3><p>適合手臂、鎖骨、腳踝，輕盈自然，不厚重。</p></div></article>
+      <article class="service"><img src="assets/lettering.jpg" alt="文字刺青"><div><small>Lettering</small><h3>手寫文字</h3><p>名字、日期、符號與短句，保留手寫的自然溫度。</p></div></article>
+      <article class="service"><img src="assets/plant.jpg" alt="小圖刺青"><div><small>Mini Tattoo</small><h3>小位置刺青</h3><p>耳後、手腕、後頸或鎖骨，低調但很有記憶點。</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section id="portfolio">
+  <div class="container">
+    <div class="portfolio-head">
+      <div>
+        <div class="small-label">Portfolio</div>
+        <h2>每一個圖案，<br>都是一段故事。</h2>
+      </div>
+      <p>從寵物紀念、植物細線到手寫文字，每張作品照都保留真實皮膚質感與刺青完成後的溫度。</p>
+    </div>
+    <div class="portfolio">
+      <a class="work" href="#"><img src="assets/pets.jpg" alt="寵物刺青"><div class="work-info"><small>Pet Memorial</small><h3>寵物肖像小圖</h3></div></a>
+      <a class="work" href="#"><img src="assets/floral.jpg" alt="花草刺青"><div class="work-info"><small>Botanical</small><h3>花草細線</h3></div></a>
+      <a class="work" href="#"><img src="assets/plant.jpg" alt="植物刺青"><div class="work-info"><small>Minimal</small><h3>極簡植物</h3></div></a>
+      <a class="work" href="#"><img src="assets/process.jpg" alt="刺青過程"><div class="work-info"><small>Custom</small><h3>客製設計過程</h3></div></a>
+      <a class="work" href="#"><img src="assets/lettering.jpg" alt="文字刺青"><div class="work-info"><small>Lettering</small><h3>手寫文字</h3></div></a>
+      <a class="work" href="#"><img src="assets/hero.jpg" alt="耳後刺青"><div class="work-info"><small>Mini Tattoo</small><h3>耳後小圖</h3></div></a>
+    </div>
+  </div>
+</section>
+
+<section id="process" class="services">
+  <div class="container">
+    <div class="small-label">Booking Process</div>
+    <h2>從想法到完成，<br>慢慢整理成適合你的圖。</h2>
+    <div class="process-grid">
+      <div class="process-card"><div class="num">01</div><h3>LINE 預約</h3><p>傳送想刺的位置、大小、參考圖、文字或想紀念的故事。</p></div>
+      <div class="process-card"><div class="num">02</div><h3>討論設計</h3><p>依照尺寸、細節、風格與位置，確認適合的設計方向與報價。</p></div>
+      <div class="process-card"><div class="num">03</div><h3>現場確認</h3><p>刺青當天確認圖稿比例與位置，微調後再進行施作。</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="notice">
+  <div class="container split">
+    <div>
+      <div class="small-label">Notice</div>
+      <h2>刺青前，<br>請先把身體照顧好。</h2>
+      <p class="text">請勿空腹、熬夜或飲酒後刺青。皮膚曬傷、過敏、受傷或有特殊狀況，請先告知。恢復期間避免泡水、曝曬與摳抓，並依照現場說明清潔保濕。</p>
+      <div class="btns" style="margin-top:28px"><a class="btn ghost" href="https://instagram.com/tattoo16888" target="_blank">查看更多作品 →</a></div>
+    </div>
+    <div class="about-img"><img src="assets/process.jpg" alt="刺青過程"></div>
+  </div>
+</section>
+
+<section class="review" id="review">
+  <div class="container review-layout">
+    <div>
+      <div class="small-label">Voices</div>
+      <h2>她們說</h2>
+      <p class="text">每一句回饋，都是我們繼續把細節做好、把感受照顧好的理由。</p>
+    </div>
+    <div class="review-list">
+      <div class="quote"><p>「第一次刺青原本很緊張，但整個過程很安心，完成後比想像中更精緻。」</p><span>小柔・耳後小圖</span></div>
+      <div class="quote"><p>「線條很細，很像把回憶輕輕放在身上，不會太高調但很耐看。」</p><span>Yun・文字刺青</span></div>
+      <div class="quote"><p>「寵物圖很有溫度，不只是像，而是把牠的感覺留下來了。」</p><span>米米・寵物紀念</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="cta">
+  <div class="cta-box">
+    <div class="cta-text">
+      <div class="small-label">Book Your Tattoo</div>
+      <h2>當你準備好，<br>把故事留在身上。</h2>
+      <p>請先透過 LINE 傳送想法、位置與尺寸。客製圖稿需預留設計時間，預約制服務讓每一位客人都有完整溝通。</p>
+      <div class="btns" style="margin-top:26px">
+        <a class="btn" href="https://line.me/ti/p/~windy701206" target="_blank">LINE 線上預約</a>
+        <a class="btn ghost" style="color:#fff;border-color:#e6d8ca" href="https://instagram.com/tattoo16888" target="_blank">Instagram</a>
+      </div>
+    </div>
+    <div class="cta-img"><img src="assets/lettering.jpg" alt="手寫文字刺青"></div>
+  </div>
+</div>
+
+<footer id="contact">
+  <div class="footer-grid">
+    <div>
+      <h3>嘉義微刺青 tattoo16888</h3>
+      <p>在皮膚上，記錄你的故事。</p>
+      <p>Fine Line Tattoo・Custom Design・Chiayi</p>
+    </div>
+    <div>
+      <h3>導覽</h3>
+      <a href="#about">關於我們</a>
+      <a href="#services">作品類型</a>
+      <a href="#portfolio">作品集</a>
+      <a href="#process">預約流程</a>
+    </div>
+    <div>
+      <h3>聯絡</h3>
+      <p>LINE｜windy701206</p>
+      <p>Instagram｜tattoo16888</p>
+      <p>地址｜待補</p>
+      <a href="https://line.me/ti/p/~windy701206" target="_blank">開始預約 →</a>
+    </div>
+  </div>
+  <div class="copy">© 2026 嘉義微刺青 tattoo16888・All rights reserved.</div>
+</footer>
+
+</body>
+</html>
