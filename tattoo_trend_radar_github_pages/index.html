@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>嘉義微刺青 Trend Radar</title>
+  <meta name="description" content="韓國、日本、台灣小刺青／紙感刺青／文青刺青靈感搜尋工具" />
+  <meta name="theme-color" content="#c8ad92" />
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="hero">
+      <div class="brand-kicker">CHIAYI SMALL TATTOO</div>
+      <h1>刺青流行靈感雷達</h1>
+      <p>韓國・日本・台灣｜小刺青・紙感・文青・細線刺青</p>
+      <div class="search-box">
+        <input id="customKeyword" type="text" placeholder="輸入想找的刺青，例如：蝴蝶結 紙感 刺青" />
+        <button onclick="searchCustom()">搜尋靈感</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="section">
+        <h2>今日快速搜尋</h2>
+        <div class="quick-grid">
+          <button onclick="openSearch('韓系 小刺青 細線 紙感 tattoo')">韓系小刺青</button>
+          <button onclick="openSearch('paper tattoo fine line tiny tattoo korea')">紙感刺青</button>
+          <button onclick="openSearch('日本 ワンポイント タトゥー シンプル')">日本小圖刺青</button>
+          <button onclick="openSearch('台灣 微刺青 韓系 細線')">台灣微刺青</button>
+          <button onclick="openSearch('ribbon tattoo fine line tiny')">蝴蝶結刺青</button>
+          <button onclick="openSearch('pet memorial tattoo fine line cat dog')">寵物紀念</button>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>地區趨勢</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>韓國 Korea</h3>
+            <p>紙感、鉛筆感、細線、溫柔小圖。</p>
+            <div class="tag-list">
+              <button onclick="multiSearch('korean fine line tattoo')">Fine Line</button>
+              <button onclick="multiSearch('korean tiny tattoo')">Tiny Tattoo</button>
+              <button onclick="multiSearch('korean paper tattoo')">Paper Tattoo</button>
+              <button onclick="multiSearch('korean handwriting tattoo')">Handwriting</button>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>日本 Japan</h3>
+            <p>簡約、ワンポイント、低調文青小圖。</p>
+            <div class="tag-list">
+              <button onclick="multiSearch('シンプル タトゥー ワンポイント')">シンプル</button>
+              <button onclick="multiSearch('ミニ タトゥー 日本')">ミニ</button>
+              <button onclick="multiSearch('韓国風 タトゥー 日本')">韓国風</button>
+              <button onclick="multiSearch('文字 タトゥー 細線')">文字</button>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>台灣 Taiwan</h3>
+            <p>微刺青、韓系小圖、客製紀念、文字刺青。</p>
+            <div class="tag-list">
+              <button onclick="multiSearch('台灣 微刺青 細線')">微刺青</button>
+              <button onclick="multiSearch('嘉義 刺青 韓系')">嘉義刺青</button>
+              <button onclick="multiSearch('台北 微刺青 小圖')">台北小圖</button>
+              <button onclick="multiSearch('台中 韓系刺青 細線')">台中韓系</button>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>客人常問分類</h2>
+        <div class="category-grid" id="categoryGrid"></div>
+      </section>
+
+      <section class="section">
+        <h2>AI 靈感關鍵字組合</h2>
+        <div class="prompt-card">
+          <textarea id="promptInput" placeholder="例如：橘貓 麒麟尾 2023.8.31 桃花 紙感 微刺青"></textarea>
+          <div class="prompt-actions">
+            <button onclick="openPromptSearch('google')">Google 圖片</button>
+            <button onclick="openPromptSearch('pinterest')">Pinterest</button>
+            <button onclick="openPromptSearch('instagram')">Instagram</button>
+            <button onclick="saveFavorite()">收藏關鍵字</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>我的收藏關鍵字</h2>
+        <div id="favorites" class="favorites-empty">還沒有收藏。看到常用風格可以先存起來。</div>
+      </section>
+    </main>
+
+    <nav class="bottom-nav">
+      <a href="#top">首頁</a>
+      <a href="#categoryGrid">分類</a>
+      <button onclick="installHint()">加入主畫面</button>
+    </nav>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

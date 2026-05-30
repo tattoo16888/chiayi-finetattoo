@@ -1,0 +1,9 @@
+{
+  "name": "嘉義微刺青 Trend Radar",
+  "short_name": "刺青雷達",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f7f1ea",
+  "theme_color": "#c8ad92",
+  "icons": []
+}
